@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Forever | Question</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/heart-rain.css" />
+    <link rel="stylesheet" href="css/question.css" />
+  </head>
+  <body>
+    <main class="container" id="container">
+      <header class="site-header">
+        <a class="site-logo" href="surprise.html">Love Forever</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="surprise.html">Question</a>
+          <a class="nav-link" href="story.html">Story</a>
+          <a class="nav-link" href="moment.html">Moment</a>
+        </nav>
+      </header>
+
+      <section class="card" id="questionCard">
+        <span class="card-badge">A sweet surprise</span>
+        <h1>Can I be your forever Valentine? 💖</h1>
+        <p class="card-message" id="cuteMessage">I have one tiny question for you.</p>
+
+        <div class="button-row">
+          <button class="btn yes-btn" id="yesBtn" type="button">
+            YES <span class="btn-heart" aria-hidden="true">❤</span>
+          </button>
+          <span class="no-anchor" id="noAnchor" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <button class="btn no-btn" id="noBtn" type="button">NO 😢</button>
+
+      <section class="yes-screen" id="yesScreen" aria-hidden="true">
+        <div class="yes-aurora yes-aurora-a" aria-hidden="true"></div>
+        <div class="yes-aurora yes-aurora-b" aria-hidden="true"></div>
+        <div class="yes-card">
+          <p class="yes-badge">You Answered Yes</p>
+          <h2>My heart is smiling because of you ❤️</h2>
+          <p>
+            This is our special screen, revealed only after your yes. Ready to
+            continue our little love journey?
+          </p>
+          <div class="yes-actions">
+            <a class="btn yes-action-link" href="story.html">Open Story</a>
+            <a class="btn yes-action-link" href="moment.html">Open Moment</a>
+            <button class="btn yes-action-close" id="closeYesScreen" type="button">
+              Back to Question
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/heart-rain.js"></script>
+    <script src="js/question.js"></script>
+  </body>
+</html>

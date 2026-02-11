@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Forever | Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="css/heart-rain.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="page-center">
+      <div class="romantic-bg">
+        <div class="sparkle-layer"></div>
+      </div>
+
+      <div id="floatingHearts"></div>
+
+      <section class="card" id="emailCard">
+        <h1>For the One Who Makes My Heart Bloom</h1>
+        <p>
+          A little surprise is waiting just for you. Enter your email and let
+          the magic begin.
+        </p>
+        <form id="emailForm" class="input-group">
+          <input
+            class="input"
+            type="email"
+            name="user_email"
+            id="userEmail"
+            placeholder="Enter your email"
+            required
+          />
+          <button class="button" type="submit">Send Surprise 💌</button>
+        </form>
+        <p class="landing-note">We only use your email to deliver this surprise.</p>
+      </section>
+    </main>
+
+    <div class="success-overlay" id="successOverlay">
+      <div class="success-card">
+        <h2>Sent with Love 💖</h2>
+        <p>Your surprise is on its way. Check your inbox!</p>
+      </div>
+    </div>
+
+    <div class="loader-overlay" id="loaderOverlay" aria-hidden="true">
+      <div class="loader-card" role="status" aria-live="polite">
+        <span class="loader-heart" aria-hidden="true"></span>
+        <p>Sending your surprise...</p>
+      </div>
+    </div>
+
+    <script src="js/heart-rain.js"></script>
+    <script src="js/email.js"></script>
+  </body>
+</html>

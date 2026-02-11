@@ -1,0 +1,50 @@
+.heart-rain-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart-rain-layer .heart-drop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  transform: translate3d(0, -20px, 0);
+  will-change: transform, opacity;
+  filter: drop-shadow(0 0 8px rgba(255, 92, 168, 0.35));
+}
+
+.heart-rain-layer .heart-drop::before,
+.heart-rain-layer .heart-drop::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffd8ea 0%, #ff7eb9 55%, #ff2e79 100%);
+}
+
+.heart-rain-layer .heart-drop::before {
+  left: -7px;
+  top: 0;
+}
+
+.heart-rain-layer .heart-drop::after {
+  left: 0;
+  top: -7px;
+}
+
+.heart-rain-layer .heart-drop {
+  background: radial-gradient(circle at 30% 30%, #ffd8ea 0%, #ff7eb9 55%, #ff2e79 100%);
+  transform-origin: center;
+  rotate: 45deg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heart-rain-layer .heart-drop {
+    display: none;
+  }
+}
