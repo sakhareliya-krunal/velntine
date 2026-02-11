@@ -12,7 +12,7 @@
   const questionCard = document.getElementById("questionCard");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
-  const shouldMoveNoButton = !reducedMotion && !coarsePointer;
+  const shouldMoveNoButton = !reducedMotion;
   const pointer3DEnabled = !reducedMotion && !coarsePointer;
 
   if (!container || !noBtn || !yesBtn || !noAnchor) {
@@ -201,10 +201,15 @@
     noBtn.dataset.boundClick = "true";
     noBtn.addEventListener("click", (event) => {
       event.preventDefault();
-      if (!shouldMoveNoButton) {
-        showNotice("No pressure. Take your time. 💖");
-        return;
-      }
+      noBtn.dataset.movedYet = "true";
+      moveNoButton();
+    });
+  }
+
+  if (shouldMoveNoButton && coarsePointer && noBtn.dataset.boundTouch !== "true") {
+    noBtn.dataset.boundTouch = "true";
+    noBtn.addEventListener("touchstart", (event) => {
+      event.preventDefault();
       noBtn.dataset.movedYet = "true";
       moveNoButton();
     });
@@ -212,7 +217,9 @@
 
   if (shouldMoveNoButton && noBtn.dataset.boundHover !== "true") {
     noBtn.dataset.boundHover = "true";
-    noBtn.addEventListener("mouseenter", moveNoButton);
+    if (!coarsePointer) {
+      noBtn.addEventListener("mouseenter", moveNoButton);
+    }
   }
 
   if (yesBtn.dataset.boundClick !== "true") {

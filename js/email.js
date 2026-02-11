@@ -12,6 +12,7 @@
   const EMAILJS_SERVICE_ID = "service_5hb6v8m";
   const EMAILJS_TEMPLATE_ID = "template_rmt1rqr";
   const SURPRISE_BASE_URL = "https://forever-loveletter.netlify.app";
+  const EMAIL_GIF_URL = `${SURPRISE_BASE_URL}/assets/email-romantic.gif`;
 
   if (window.emailjs) {
     window.emailjs.init(EMAILJS_PUBLIC_KEY);
@@ -59,7 +60,7 @@
         <div style="background:#ffffff;border-radius:18px;padding:28px;box-shadow:0 20px 60px rgba(255, 31, 107, 0.2);">
           <h1 style="margin:0 0 12px;font-family:'Playfair Display', Georgia, serif;color:#61102f;">A Valentine Surprise Just For You</h1>
           <p style="margin:0 0 16px;color:#7b2144;">Every moment with you is my favorite. I made something special to remind you how loved you are.</p>
-          <img src="assets/email-romantic.gif" alt="romantic" style="width:100%;border-radius:16px;margin:16px 0;" />
+          <img src="${EMAIL_GIF_URL}" alt="Romantic valentine animation" width="560" style="display:block;max-width:100%;width:100%;height:auto;border-radius:16px;margin:16px 0;" />
           <a href="${landingUrl}" style="display:inline-block;margin-top:10px;padding:14px 22px;background:#ff2f7d;color:#ffffff;text-decoration:none;border-radius:999px;font-weight:600;">Open Your Surprise ❤️</a>
           <p style="margin-top:18px;color:#a13c64;font-size:12px;">Sent with endless love.</p>
         </div>
